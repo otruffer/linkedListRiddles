@@ -6,9 +6,9 @@ package linkedListRiddles
 // length (so no keeping track of all visited nodes) and should run in O(n)... so linear time
 
 // The idea is simple: we loop and move the head forwards by 1 every time. if we reach nil,
-// there's no loop. we drag behnd a second reference, which we move forwards every second time
-// if we have a loop eventually the dragged behind value and the head are the same: we detected
-// a loop. memory is clearly constant. we did not alter the list. worst time szenario is one big loop
+// there's no cycle. we drag behnd a second reference, which we move forwards every second time
+// if we have a cycle eventually the dragged behind value and the head are the same: we detected
+// a cycle. memory is clearly constant. we did not alter the list. worst time szenario is one big loop
 // where we have time consumption 2 * n, if n is the length of the list, which is still in O(n).
 func HasCycle(head *Node) bool {
 	var drag = head
